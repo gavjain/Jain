@@ -10,9 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let list = ["Share", "Notification", "Clear Cache", "Buy Full Version", "About Us"]
+    let list = ["Share","Clear Cache", "Buy Full Version", "About Us"]
 
-    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return(list.count)
@@ -21,41 +20,59 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-//        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel?.text = list[indexPath.row]
         
         return(cell)
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0  {
-            shareWithFriends()
-        }else if indexPath.row == 1  {
-            shareWithFriends()
-        }else if indexPath.row == 2  {
-            shareWithFriends()
-        }else if indexPath.row == 3  {
-            shareWithFriends()
-        }else{
-            print("Bishal \(indexPath.row): value is \(list[indexPath.row])")
-        }
-        
         switch indexPath.row {
         case 0:
             shareWithFriends()
         case 1:
-            shareWithFriends()
+            clearCache()
         case 2:
-            shareWithFriends()
+            buyFullVersion()
         case 3:
-            shareWithFriends()
-       
+            aboutUs()
         default:
             print("Bishal \(indexPath.row): value is \(list[indexPath.row])")
         }
     }
     func shareWithFriends()  {
         print("Sharing with friend function is here")
+        let firstActivityItem = "Text you want"
+        let secondActivityItem : NSURL = NSURL(string: "http//:urlyouwant")!
+        // If you want to put an image
+        let image : UIImage = UIImage(named: "first.pdf")!
+        
+        let activityViewController : UIActivityViewController = UIActivityViewController(
+            activityItems: [firstActivityItem, secondActivityItem, image], applicationActivities: nil)
+        
+        activityViewController.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 150, width: 0, height: 0)
+        
+        // Anything you want to exclude
+        activityViewController.excludedActivityTypes = [
+            UIActivityType.postToWeibo,
+            UIActivityType.print,
+            UIActivityType.assignToContact,
+            UIActivityType.saveToCameraRoll,
+            UIActivityType.addToReadingList,
+            UIActivityType.postToFlickr,
+            UIActivityType.postToVimeo,
+            UIActivityType.postToTencentWeibo
+        ]
+        
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    func clearCache() {
+        print("Cache has been cleaned")
+    }
+    func buyFullVersion() {
+        print("For the full version")
+    }
+    func aboutUs() {
+        print("For additional details")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
