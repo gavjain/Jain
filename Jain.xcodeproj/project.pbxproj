@@ -16,6 +16,7 @@
 		F4B72E3320EBC065007CCE54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B72E3120EBC065007CCE54 /* LaunchScreen.storyboard */; };
 		F4B72E3E20EBC066007CCE54 /* JainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B72E3D20EBC066007CCE54 /* JainTests.swift */; };
 		F4B72E4920EBC066007CCE54 /* JainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B72E4820EBC066007CCE54 /* JainUITests.swift */; };
+		F4F3461820EE33D000CF591E /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F3461720EE33D000CF591E /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F4B72E4420EBC066007CCE54 /* JainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B72E4820EBC066007CCE54 /* JainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JainUITests.swift; sourceTree = "<group>"; };
 		F4B72E4A20EBC066007CCE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F3461720EE33D000CF591E /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				F4B6663D20ECFEF000BAC68A /* SongListViewController.swift */,
 				F4B6664120ECFF2900BAC68A /* BookListViewController.swift */,
 				F4B6664320ECFF7200BAC68A /* SettingsViewController.swift */,
+				F4F3461720EE33D000CF591E /* MyCollectionViewCell.swift */,
 			);
 			path = Jain;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B72E2720EBC063007CCE54 /* AppDelegate.swift in Sources */,
+				F4F3461820EE33D000CF591E /* MyCollectionViewCell.swift in Sources */,
 				F4B6663F20ECFEF000BAC68A /* SongListViewController.swift in Sources */,
 				F4B6664220ECFF2900BAC68A /* BookListViewController.swift in Sources */,
 				F4B6664420ECFF7200BAC68A /* SettingsViewController.swift in Sources */,

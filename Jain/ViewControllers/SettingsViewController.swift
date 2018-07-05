@@ -11,7 +11,22 @@ import UIKit
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let list = ["Share","Clear Cache", "Buy Full Version", "About Us"]
-
+    
+    //MARK: View Life cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: table view delegate functions
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return(list.count)
@@ -39,6 +54,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             print("Bishal \(indexPath.row): value is \(list[indexPath.row])")
         }
     }
+    
+    //MARK: Settings functions
+    
     func shareWithFriends()  {
         print("Sharing with friend function is here")
         let firstActivityItem = "Text you want"
@@ -65,6 +83,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.present(activityViewController, animated: true, completion: nil)
     }
+    
     func clearCache() {
         print("Cache has been cleaned")
     }
@@ -74,26 +93,4 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     func aboutUs() {
         print("For additional details")
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
